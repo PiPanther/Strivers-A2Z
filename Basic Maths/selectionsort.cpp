@@ -1,36 +1,37 @@
 #include <iostream>
-#include <limits.h>
 using namespace std;
 
 void printArray(int arr[], int size)
 {
-    int i=0;
-    cout<<endl;
-    for(i;i<size;i++)
+    for(int i = 0;i<size;i++)
     {
-        cout<<arr[i]<<" ";
+        cout<< " " << arr[i];
     }
+    cout<<endl;
 }
-
 
 void selectionSort(int arr[], int size)
 {
-    for(int i=0;i<size-1;i++){
+    int i,j;
+    for(i=0;i<size-1;i++)
+    {
         int minIndex = i;
-        for(int j = i+1;j<size;j++){
-            if(arr[j]<arr[minIndex])
+        for(int j = i;j<size;j++)
+        {   
+            if(arr[j]<=arr[minIndex])
             minIndex = j;
-            
         }
-        swap(arr[minIndex], arr[i]);
+        swap(arr[i], arr[minIndex]);
     }
 }
 
-int main()
-{
-    int arr[] = {9,5,3,6,7,1};
-    selectionSort(arr,6);
-
-    printArray(arr, 6);
+int main() {
+    int arr[] = {4,5,9,7,2,6,4};
+    int size = 7;
+    selectionSort(arr, size);
+    printArray(arr, size);
     return 0;
 }
+
+
+// [2,5,9,1,4,6]
