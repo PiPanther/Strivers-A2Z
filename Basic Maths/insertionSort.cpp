@@ -8,7 +8,7 @@ void printArray(int arr[], int size)
     cout<< endl;
 }
 
-void selectionSort(int arr[], int size)
+void InsertionSort(int arr[], int size)
 {
     int i,j;
     for(i=0;i<size;i++)
@@ -26,7 +26,7 @@ int main()
 {
     int arr[] = {9,8,7,6,5,4};
     int size = 6;
-    selectionSort(arr, size);
+    InsertionSort(arr, size);
     printArray(arr, size);
     return 0;
 }
